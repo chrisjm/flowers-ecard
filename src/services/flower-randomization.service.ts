@@ -5,24 +5,51 @@ import { Petal } from '../models/petal';
 
 export class FlowerRandomizationService {
   private readonly colors = [
-    '#f10e57',
-    '#ea767a',
-    '#ff6d3d',
-    '#ecac43',
-    '#fb9983',
-    '#f9bc9f',
-    '#f8ed38',
-    '#a8e3f9',
-    '#d1f2fd',
-    '#ecd5f5',
-    '#fee4fd',
-    '#8520b4',
-    '#fa2e59',
-    '#ff703f',
-    '#ff703f',
-    '#f7bc05',
-    '#ecf6bb',
-    '#76bcad'
+    '#cc1f1a',
+    '#e3342f',
+    '#ef5753',
+    '#f9acaa',
+    '#fcebea',
+    '#de751f',
+    '#f6993f',
+    '#faad63',
+    '#fcd9b6',
+    '#fff5eb',
+    '#f2d024',
+    '#ffed4a',
+    '#fff382',
+    '#fff9c2',
+    '#fcfbeb',
+    '#1f9d55',
+    '#38c172',
+    '#51d88a',
+    '#a2f5bf',
+    '#e3fcec',
+    '#38a89d',
+    '#4dc0b5',
+    '#64d5ca',
+    '#a0f0ed',
+    '#e8fffe',
+    '#2779bd',
+    '#3490dc',
+    '#6cb2eb',
+    '#bcdefa',
+    '#eff8ff',
+    '#5661b3',
+    '#6574cd',
+    '#7886d7',
+    '#b2b7ff',
+    '#e6e8ff',
+    '#794acf',
+    '#9561e2',
+    '#a779e9',
+    '#d6bbfc',
+    '#f3ebff',
+    '#eb5286',
+    '#f66d9b',
+    '#fa7ea8',
+    '#ffbbca',
+    '#ffebef',
   ];
 
   constructor() {}
@@ -48,10 +75,7 @@ export class FlowerRandomizationService {
 
   getFlowerOnCanvas(canvasWidth: number, canvasHeight: number): Flower {
     return this.getFlowerAt(
-      new Point(
-        this.randomIntLessThan(canvasWidth),
-        this.randomIntLessThan(canvasHeight)
-      )
+      new Point(this.randomIntLessThan(canvasWidth), this.randomIntLessThan(canvasHeight))
     );
   }
 
