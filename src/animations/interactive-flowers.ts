@@ -46,6 +46,9 @@ export class InteractiveFlowers {
       this.calculateMouseRelativePositionInCanvas(e);
       const flower = this.randomizationService.getFlowerAt(this.mousePosition);
       this.flowers.push(flower);
+      if (this.flowers.length > 25) {
+        this.flowers.shift();
+      }
       this.animateFlowers();
     });
 
