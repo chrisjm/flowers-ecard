@@ -60,14 +60,7 @@ export class InteractiveFlowers {
   }
 
   private calculateMouseRelativePositionInCanvas(e: MouseEvent) {
-    this.mousePosition = new Point(
-      e.clientX +
-        (document.documentElement.scrollLeft || document.body.scrollLeft) -
-        this.canvas.offsetLeft,
-      e.clientY +
-        (document.documentElement.scrollTop || document.body.scrollTop) -
-        this.canvas.offsetTop
-    );
+    this.mousePosition = new Point(e.offsetX, e.offsetY);
   }
 
   private addShadowEffect() {
