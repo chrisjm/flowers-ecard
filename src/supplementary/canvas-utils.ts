@@ -41,7 +41,7 @@ export class CanvasUtils {
     y: number,
     color: string = 'black',
     font: string = '12px Times New Roman',
-    textAlign: string = 'center'
+    textAlign: CanvasTextAlign = 'center'
   ) {
     this.context.save();
     this.context.font = font;
